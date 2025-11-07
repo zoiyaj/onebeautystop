@@ -1,0 +1,158 @@
+
+:root {
+  --beige: #F3ECE5;
+  --taupe: #D8CFC7;
+  --charcoal: #2E2E36;
+  --gold: #D8B76E;
+  --text-dark: #1A1A1A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background-color: var(--beige);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  background-color: var(--beige);
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--taupe);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--charcoal);
+  letter-spacing: 1px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--charcoal);
+  margin-left: 30px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: var(--charcoal);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  background-color: var(--charcoal);
+  color: var(--gold);
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-btn:hover {
+  background-color: var(--gold);
+  color: var(--charcoal);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--charcoal);
+  color: var(--beige);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.page {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--charcoal);
+}
+
+.page p {
+  line-height: 1.7;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 10px 10px 0 0;
+    display: inline-block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

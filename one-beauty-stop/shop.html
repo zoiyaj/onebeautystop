@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | One Beauty Stop</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <style>
+    /* Layout */
+    .shop-container {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .scan-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: -40px;
+    }
+
+    .scan-section img {
+      width: 350px;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .scan-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .scan-content h2 {
+      color: var(--gold);
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+    }
+
+    .scan-content p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .shop-section {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+       margin-bottom: 80px;
+    }
+
+    .shop-section h2 {
+      color: var(--gold);
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .shop-section p {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto;
+ 
+    }
+
+    @media (max-width: 768px) {
+      .scan-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .scan-section img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  </style>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header>
+    <a href="./index.html" class="logo-container">
+      <img src="./logo.png" alt="One Beauty Stop Logo" />
+      <div class="logo">One Beauty Stop</div>
+    </a>
+    <nav>
+      <a href="./professionals.html">Professionals</a>
+      <a href="./clients.html">Clients</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="shop-container">
+    <!-- SCAN SECTION -->
+    <section class="scan-section">
+      <img src="./shop.jpg" alt="Scanning beauty product" />
+      <div class="scan-content">
+        <h2>Scan</h2>
+        <p><strong>Create your personalized beauty profile.</strong><br>
+        Build a profile tailored to your individual needs — from your skin and hair type to your preferences and sensitivities.</p>
+
+        <p><strong>Scan or upload any product.</strong><br>
+        Snap a photo or scan a barcode to instantly access everything you need — ingredients, usage, and compatibility — all in one place. No more visiting multiple sites or guessing what works.</p>
+
+        <p><strong>Learn what’s inside.</strong><br>
+        Our intelligent ingredient scanner breaks down every formula into clear insights. Understand how each ingredient benefits you and instantly identify allergens or avoidants.</p>
+
+        <p><strong>AI-Powered Global Reviews.</strong><br>
+        Read smart, AI-summarized insights from reviews around the world — giving you an instant overview of how products perform before you buy.</p>
+
+        <p><strong>Shop smarter, not harder.</strong><br>
+        Discover where to purchase your chosen products locally or online — saving you time and effort while keeping your beauty routine effortless.</p>
+      </div>
+    </section>
+
+    <!-- SHOP SECTION -->
+     </main>
+    <section class="shop-section">
+      <h2>Shop</h2>
+      <p><strong>Unlock member-only savings.</strong><br>
+      Enjoy exclusive access to verified promo codes and discounts at top beauty retailers — reserved just for One Beauty Stop members.<br><br>
+      Because true beauty isn’t just about what you buy — it’s about how effortlessly you find it.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 One Beauty Stop — All Rights Reserved
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

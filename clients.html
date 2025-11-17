@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clients | One Beauty Stop</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <style>
+    /* HERO SECTION */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(46, 46, 54, 0.45);
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--beige);
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      color: var(--beige);
+      margin-top: 10px;
+    }
+
+    /* CATEGORY SECTIONS */
+    .category {
+      max-width: 1100px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .category h2 {
+      color: var(--gold);
+      font-size: 2rem;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ICON GRID */
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-card i {
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .feature-card h3 {
+      color: var(--charcoal);
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 2.2rem; }
+      .hero-content p { font-size: 1.1rem; }
+    }
+  </style>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header>
+    <a href="./index.html" class="logo-container">
+      <img src="./logo.png" alt="One Beauty Stop Logo" />
+      <div class="logo">One Beauty Stop</div>
+    </a>
+    <nav>
+      <a href="./professionals.html">Professionals</a>
+      <a href="./clients.html">Clients</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <img src="./clientshero.png" alt="Clients experiencing beauty services" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>CLIENTS</h1>
+      <p>Discover • Experience • Benefit</p>
+    </div>
+  </section>
+
+  <!-- DISCOVER -->
+  <section class="category">
+    <h2>Discover Self-Care</h2>
+    <div class="icon-grid">
+      <div class="feature-card">
+        <i data-lucide="search"></i>
+        <h3>Find trusted beauty professionals near and far</h3>
+        <p>Search by service, specialty, or location to discover verified professionals and beauty businesses — from stylists and estheticians to tattoo artists and nail experts.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="image"></i>
+        <h3>See real work, real results</h3>
+        <p>Browse authentic, up-to-date portfolios showcasing each professional’s artistry and current services — beautifully tailored to your preferences.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="map"></i>
+        <h3>Search beyond your city</h3>
+        <p>Whether you’re traveling, relocating, or booking last-minute self-care, easily find your favorite professionals or discover new talent nationwide. Your beauty network travels with you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="category">
+    <h2>Experience Beauty</h2>
+    <div class="icon-grid">
+      <div class="feature-card">
+        <i data-lucide="sparkles"></i>
+        <h3>Personalized matches made for you</h3>
+        <p>Set your skin type, hair goals, and product preferences. The app intelligently recommends professionals and services tailored to your unique beauty needs.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="users"></i>
+        <h3>One app, endless possibilities</h3>
+        <p>Explore stylists, nail artists, estheticians, tattoo artists, and more — all in one place. Each professional showcases multiple beauty categories to help you find your perfect fit.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="star"></i>
+        <h3>Transparent reviews, every time</h3>
+        <p>Read genuine client feedback before you book — and leave reviews after your visit. Build trust within a community based on verified experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFIT -->
+  <section class="category">
+    <h2>Benefit</h2>
+    <div class="icon-grid">
+      <div class="feature-card">
+        <i data-lucide="gift"></i>
+        <h3>Earn points for every booking and check-in</h3>
+        <p>Be rewarded for every visit. Your in-app activity earns points that can be redeemed for discounts and exclusive in-app perks.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="badge-percent"></i>
+        <h3>Enjoy exclusive savings</h3>
+        <p>Access member-only offers and beauty product discounts at partnered retailers</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="share-2"></i>
+        <h3>Refer and share effortlessly</h3>
+        <p>Love your service? Share your professional’s page directly with friends — referrals have never been simpler or more rewarding.</p>
+      </div>
+      <div class="feature-card">
+        <i data-lucide="scan"></i>
+        <h3>Smart Beauty Scanner</h3>
+        <p>Our in-app scanner uses your preferences to guide your beauty product choices — teaching you proper use, highlighting allergens, and showing where to buy. Discover ingredient insights and personalized recommendations tailored just for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 One Beauty Stop — All Rights Reserved
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

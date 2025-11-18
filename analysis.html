@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis | One Beauty Stop</title>
+
+  <link rel="stylesheet" href="./styles/style.css" />
+
+  <style>
+    /* HERO SECTION */
+    .analysis-hero {
+      position: relative;
+      width: 100%;
+      height: 55vh;
+      background: url(./styles/analysis-hero.jpg) center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .analysis-hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(46, 46, 54, 0.55);
+    }
+
+    .analysis-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+      max-width: 800px;
+    }
+
+    .analysis-hero-content h1 {
+      font-size: 2.8rem;
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .analysis-hero-content p {
+      font-size: 1.2rem;
+      color: var(--beige);
+      opacity: 0.9;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* PAGE CONTENT */
+    .analysis-container {
+      max-width: 1100px;
+      margin: 90px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    /* CARDS */
+    .analysis-card {
+      background: white;
+      padding: 40px 25px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      text-align: left;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .analysis-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .analysis-card i {
+      color: var(--gold);
+      font-size: 38px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .analysis-card h2 {
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .analysis-card p {
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .analysis-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .analysis-card ul li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+      color: #444;
+    }
+
+    .analysis-card ul li::before {
+      content: "•";
+      color: var(--gold);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    @media (max-width: 768px) {
+      .analysis-hero { height: 45vh; }
+      .analysis-hero-content h1 { font-size: 2rem; }
+      .analysis-hero-content p { font-size: 1rem; }
+    }
+  </style>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header>
+    <a href="./index.html" class="logo-container">
+      <img src="./logo.png" alt="One Beauty Stop Logo" />
+      <span class="logo">One Beauty Stop</span>
+    </a>
+    <nav>
+      <a href="./professionals.html">Professionals</a>
+      <a href="./clients.html">Clients</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./analysis.html">Analysis</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="analysis-hero">
+    <div class="analysis-hero-content">
+      <h1>Know Your Beauty Type</h1>
+      <p>Learn how to identify your unique skin and hair characteristics for better products, better services, and better results.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="analysis-container">
+    <div class="analysis-grid">
+
+      <!-- Skin Type -->
+      <div class="analysis-card">
+        <i data-lucide="droplet"></i>
+        <h2>Skin Type Analysis</h2>
+        <p>Your skin type determines how products react and perform on your skin. Here's how to identify yours:</p>
+
+        <ul>
+          <li><strong>Normal:</strong> Balanced tone, minimal shine or dryness.</li>
+          <li><strong>Dry:</strong> Tightness, flaking, dullness after cleansing.</li>
+          <li><strong>Oily:</strong> Shine through day, larger pores.</li>
+          <li><strong>Combination:</strong> Oily T-zone, dry or normal cheeks.</li>
+          <li><strong>Sensitive:</strong> Easily irritated, reactive to temperature/products.</li>
+        </ul>
+
+        <p><em>Try this:</em> Wash your face & wait 30 minutes—observe how it feels.</p>
+      </div>
+
+      <!-- Hair Type -->
+      <div class="analysis-card">
+        <i data-lucide="wind"></i>
+        <h2>Hair Type Analysis</h2>
+        <p>Your hair’s curl pattern, density, and porosity determine what products work best.</p>
+
+        <ul>
+          <li><strong>Straight (1):</strong> Smooth, reflective, may get oily fast.</li>
+          <li><strong>Wavy (2):</strong> Loose S-shape, moderate frizz.</li>
+          <li><strong>Curly (3):</strong> Defined curls, prone to dryness.</li>
+          <li><strong>Coily (4):</strong> Tight curls, delicate and moisture-loving.</li>
+        </ul>
+
+        <p><em>Try this:</em> Stretch a wet strand to see curl elasticity.</p>
+      </div>
+
+      <!-- Personalized Insight -->
+      <div class="analysis-card">
+        <i data-lucide="sparkles"></i>
+        <h2>Personalized Beauty Insight</h2>
+        <p>Save your analysis inside One Beauty Stop to unlock tailored professional matches, smarter product recommendations, and optimized results using our in-app scanner.</p>
+
+        <p>When your beauty profile is understood, every choice becomes easier— and every service becomes more effective.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2025 One Beauty Stop — All Rights Reserved
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const cards = document.querySelectorAll('.analysis-card');
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((entry, index)=>{
+        if(entry.isIntersecting){
+          setTimeout(()=>entry.target.classList.add('visible'), index * 150);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>

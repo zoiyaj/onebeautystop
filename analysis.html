@@ -51,14 +51,60 @@
       margin: 0 auto;
     }
 
-    /* PAGE CONTENT */
+    /* MAIN CONTENT */
     .analysis-container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 90px auto;
       padding: 0 20px;
-      text-align: center;
     }
 
+    /* AI SCANNER SECTION */
+    .scanner-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .scanner-section img {
+      width: 420px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .scanner-text {
+      flex: 1;
+    }
+
+    .scanner-text h2 {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .scanner-text p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    /* INTRO TEXT ABOVE CARDS */
+    .intro-text {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+    }
+
+    .intro-text p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    /* CARDS GRID */
     .analysis-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -96,10 +142,10 @@
       margin-bottom: 12px;
     }
 
-    .analysis-card p {
+    .analysis-card p,
+    .analysis-card ul li {
       color: #444;
       line-height: 1.6;
-      margin-bottom: 12px;
     }
 
     .analysis-card ul {
@@ -111,7 +157,6 @@
       margin-bottom: 8px;
       padding-left: 20px;
       position: relative;
-      color: #444;
     }
 
     .analysis-card ul li::before {
@@ -122,10 +167,32 @@
       top: 0;
     }
 
-    @media (max-width: 768px) {
-      .analysis-hero { height: 45vh; }
-      .analysis-hero-content h1 { font-size: 2rem; }
-      .analysis-hero-content p { font-size: 1rem; }
+    /* SCANNER LINK */
+    .scanner-link {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .scanner-link a {
+      color: var(--gold);
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      transition: 0.3s ease;
+    }
+
+    .scanner-link a:hover {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 900px) {
+      .scanner-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .scanner-text {
+        text-align: center;
+      }
     }
   </style>
 
@@ -152,36 +219,54 @@
   <section class="analysis-hero">
     <div class="analysis-hero-content">
       <h1>Know Your Beauty Type</h1>
-      <p>Learn how to identify your unique skin and hair characteristics for better products, better services, and better results.</p>
+      <p>Identify what makes your skin and hair unique — so every product, every service, and every result is perfectly tailored to you.</p>
     </div>
   </section>
 
   <!-- MAIN CONTENT -->
   <main class="analysis-container">
+
+    <!-- AI SCANNER INFO SECTION -->
+    <section class="scanner-section">
+      <img src="./styles/skin-scanner.jpg" alt="AI Skin Scanner">
+      <div class="scanner-text">
+        <h2>How Our AI Skin Analysis Works</h2>
+        <p>Our advanced AI Skin Analysis Scanner uses your phone’s camera to evaluate your skin in real time. It reads tone, texture, hydration, pore visibility, fine lines, dark spots, and sensitivity markers — all without needing any extra tools.</p>
+        <p>The scanner compares thousands of data points and matches them with dermatologist-backed research and ingredients databases. Within seconds, you receive a personalized beauty report crafted for your unique skin profile.</p>
+        <p>This ensures every product you buy and every service you book is aligned with your actual skin health — not guesswork.</p>
+      </div>
+    </section>
+
+    <!-- INTRO TEXT ABOVE CARDS -->
+    <div class="intro-text">
+      <p>When you understand your natural skin and hair type, choosing products becomes effortless. Our guide below helps you identify your type so you can unlock a fully personalized, luxury beauty experience.</p>
+    </div>
+
+    <!-- CARDS -->
     <div class="analysis-grid">
 
       <!-- Skin Type -->
       <div class="analysis-card">
         <i data-lucide="droplet"></i>
         <h2>Skin Type Analysis</h2>
-        <p>Your skin type determines how products react and perform on your skin. Here's how to identify yours:</p>
+        <p>Your skin type determines how products react and perform. Here's how to identify yours:</p>
 
         <ul>
           <li><strong>Normal:</strong> Balanced tone, minimal shine or dryness.</li>
           <li><strong>Dry:</strong> Tightness, flaking, dullness after cleansing.</li>
-          <li><strong>Oily:</strong> Shine through day, larger pores.</li>
+          <li><strong>Oily:</strong> Shine through the day, larger pores.</li>
           <li><strong>Combination:</strong> Oily T-zone, dry or normal cheeks.</li>
           <li><strong>Sensitive:</strong> Easily irritated, reactive to temperature/products.</li>
         </ul>
 
-        <p><em>Try this:</em> Wash your face & wait 30 minutes—observe how it feels.</p>
+        <p><em>Try this:</em> Wash your face, wait 30 minutes, then observe.</p>
       </div>
 
       <!-- Hair Type -->
       <div class="analysis-card">
         <i data-lucide="wind"></i>
         <h2>Hair Type Analysis</h2>
-        <p>Your hair’s curl pattern, density, and porosity determine what products work best.</p>
+        <p>Your curl pattern, density, and porosity determine what products work best.</p>
 
         <ul>
           <li><strong>Straight (1):</strong> Smooth, reflective, may get oily fast.</li>
@@ -190,19 +275,16 @@
           <li><strong>Coily (4):</strong> Tight curls, delicate and moisture-loving.</li>
         </ul>
 
-        <p><em>Try this:</em> Stretch a wet strand to see curl elasticity.</p>
-      </div>
-
-      <!-- Personalized Insight -->
-      <div class="analysis-card">
-        <i data-lucide="sparkles"></i>
-        <h2>Personalized Beauty Insight</h2>
-        <p>Save your analysis inside One Beauty Stop to unlock tailored professional matches, smarter product recommendations, and optimized results using our in-app scanner.</p>
-
-        <p>When your beauty profile is understood, every choice becomes easier— and every service becomes more effective.</p>
+        <p><em>Try this:</em> Stretch a wet strand to check elasticity.</p>
       </div>
 
     </div>
+
+    <!-- SCANNER LINK -->
+    <div class="scanner-link">
+      <a href="./shop.html">Learn about our AI Beauty Scanner →</a>
+    </div>
+
   </main>
 
   <footer>

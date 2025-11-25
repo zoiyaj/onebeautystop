@@ -51,7 +51,7 @@
       margin: 0 auto;
     }
 
-    /* MAIN CONTENT */
+    /* MAIN CONTAINER */
     .analysis-container {
       max-width: 1200px;
       margin: 90px auto;
@@ -61,13 +61,15 @@
     /* AI SCANNER SECTION */
     .scanner-section {
       display: flex;
-      align-items: center;
-      gap: 40px;
-      margin-bottom: 80px;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 70px;
+      margin: 120px auto;
+      max-width: 1200px;
     }
 
     .scanner-section img {
-      width: 420px;
+      width: 450px;
       height: auto;
       border-radius: 20px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.12);
@@ -75,33 +77,36 @@
 
     .scanner-text {
       flex: 1;
+      max-width: 500px;
+      line-height: 1.7;
     }
 
     .scanner-text h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: var(--gold);
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .scanner-text p {
-      font-size: 1.1rem;
-      color: #444;
-      line-height: 1.7;
-      margin-bottom: 12px;
+      font-size: 1.15rem;
+      color: #3a3a3a;
+      margin-bottom: 18px;
     }
 
     /* INTRO TEXT ABOVE CARDS */
     .intro-text {
       text-align: center;
       max-width: 900px;
-      margin: 0 auto 60px auto;
+      margin: 40px auto 80px auto;
+      padding: 0 20px;
     }
 
     .intro-text p {
-      font-size: 1.2rem;
-      line-height: 1.7;
-      color: #444;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #3a3a3a;
     }
 
     /* CARDS GRID */
@@ -185,13 +190,20 @@
       opacity: 0.7;
     }
 
-    @media (max-width: 900px) {
+    /* MOBILE FIX */
+    @media(max-width: 900px) {
       .scanner-section {
         flex-direction: column;
         text-align: center;
+        gap: 40px;
       }
+
       .scanner-text {
-        text-align: center;
+        max-width: 90%;
+      }
+
+      .scanner-section img {
+        width: 90%;
       }
     }
   </style>
@@ -219,27 +231,30 @@
   <section class="analysis-hero">
     <div class="analysis-hero-content">
       <h1>Know Your Beauty Type</h1>
-      <p>Identify what makes your skin and hair unique — so every product, every service, and every result is perfectly tailored to you.</p>
+      <p>Identify what makes your skin and hair unique — so every product and service is perfectly tailored to you.</p>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
   <main class="analysis-container">
 
-    <!-- AI SCANNER INFO SECTION -->
+    <!-- AI SCANNER INFO -->
     <section class="scanner-section">
-      <img src="skinanalysis.png" alt="AI Skin Scanner">
+      <img src="./styles/skin-scanner.jpg" alt="AI Skin Scanner">
+
       <div class="scanner-text">
         <h2>How Our AI Skin Analysis Works</h2>
-        <p>Our advanced AI Skin Analysis Scanner uses your phone’s camera to evaluate your skin in real time. It reads tone, texture, hydration, pore visibility, fine lines, dark spots, and sensitivity markers — all without needing any extra tools.</p>
-        <p>The scanner compares thousands of data points and matches them with dermatologist-backed research and ingredients databases. Within seconds, you receive a personalized beauty report crafted for your unique skin profile.</p>
-        <p>This ensures every product you buy and every service you book is aligned with your actual skin health — not guesswork.</p>
+
+        <p>Our advanced AI Skin Analysis Scanner uses your phone’s camera to evaluate your skin in real time. It reads tone, texture, hydration levels, pore visibility, fine lines, dark spots, and sensitivity markers — all without any extra tools.</p>
+
+        <p>The scanner compares thousands of data points and matches them with dermatologist-backed research and ingredient databases to create a personalized skin profile.</p>
+
+        <p>Your results help guide product recommendations, treatments, and professional matches tailored specifically to your needs.</p>
       </div>
     </section>
 
-    <!-- INTRO TEXT ABOVE CARDS -->
+    <!-- INTRO ABOVE CARDS -->
     <div class="intro-text">
-      <p>When you understand your natural skin and hair type, choosing products becomes effortless. Our guide below helps you identify your type so you can unlock a fully personalized, luxury beauty experience.</p>
+      <p>Understanding your natural skin and hair type makes choosing products effortless. Use the guides below to identify your features and enjoy a personalized beauty journey.</p>
     </div>
 
     <!-- CARDS -->
@@ -280,11 +295,10 @@
 
     </div>
 
-    <!-- SCANNER LINK -->
+    <!-- LINK TO SCANNER -->
     <div class="scanner-link">
       <a href="./shop.html">Learn about our AI Beauty Scanner →</a>
     </div>
-
   </main>
 
   <footer>

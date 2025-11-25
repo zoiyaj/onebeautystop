@@ -1,31 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis | One Beauty Stop</title>
+
+  <link rel="stylesheet" href="./styles/style.css" />
+
+  <style>
+    /* HERO */
+    .analysis-hero {
+      position: relative;
+      width: 100%;
+      height: 55vh;
+      background: url(./styles/analysis-hero.jpg) center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .analysis-hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(46,46,54,0.55);
+    }
+
+    .analysis-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+      max-width: 800px;
+    }
+
+    .analysis-hero-content h1 {
+      font-size: 2.8rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .analysis-hero-content p {
+      color: var(--beige);
+      opacity: .9;
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* PAGE WRAPPER */
+    .analysis-container {
+      max-width: 1200px;
+      margin: 90px auto;
+      padding: 0 20px;
+    }
+
+
+    /* ================================
+       SCANNER SPLIT SECTION
+    ================================= */
+    .scanner-section {
+      display: flex;
+      gap: 60px;
+      margin-bottom: 120px;  /* FORCES LINE BREAK AFTER */
+      align-items: flex-start;
+    }
+
+    .scanner-section img {
+      width: 450px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .scanner-text {
+      flex: 1;
+      max-width: 520px;
+    }
+
+    .scanner-text h2 {
+      font-size: 2rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .scanner-text p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+
+    /* ================================
+       INTRO TEXT (OWN SECTION)
+    ================================= */
+    .intro-text {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 80px auto;
+      padding: 0 20px;
+      display: block;   /* ensures it acts like its own block */
+    }
+
+    .intro-text p {
+      font-size: 1.25rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+
+    /* ================================
+       CARDS SECTION (OWN SECTION)
+    ================================= */
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .analysis-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 40px 28px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: .6s ease;
+    }
+
+    .analysis-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .analysis-card i {
+      font-size: 38px;
+      color: var(--gold);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .analysis-card h2 {
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .analysis-card p, .analysis-card li {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .analysis-card ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+
+    .analysis-card ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .analysis-card ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+
+    .scanner-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .scanner-link a {
+      font-size: 1.15rem;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 4px;
+      transition: .3s ease;
+    }
+
+    .scanner-link a:hover { opacity: 0.7; }
+
+
+    @media(max-width: 900px) {
+      .scanner-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .scanner-section img {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .scanner-text {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<header>
+  <a href="./index.html" class="logo-container">
+    <img src="./logo.png" alt="One Beauty Stop Logo">
+    <span class="logo">One Beauty Stop</span>
+  </a>
+  <nav>
+    <a href="./professionals.html">Professionals</a>
+    <a href="./clients.html">Clients</a>
+    <a href="./shop.html">Shop</a>
+    <a href="./analysis.html">Analysis</a>
+    <a href="./about.html">About</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="analysis-hero">
+  <div class="analysis-hero-content">
+    <h1>Know Your Beauty Type</h1>
+    <p>Identify what makes your skin and hair unique — so every product and service is chosen with precision.</p>
+  </div>
+</section>
+
+
+<!-- PAGE CONTENT -->
 <main class="analysis-container">
 
-  <!-- AI SCANNER INFO -->
+  <!-- SCANNER SECTION -->
   <section class="scanner-section">
     <img src="./styles/skin-scanner.jpg" alt="AI Skin Scanner">
 
     <div class="scanner-text">
       <h2>How Our AI Skin Analysis Works</h2>
 
-      <p>Our advanced AI Skin Analysis Scanner uses your phone’s camera to evaluate your skin in real time. It reads tone, texture, hydration levels, pore visibility, fine lines, dark spots, and sensitivity markers — all without any extra tools.</p>
+      <p>Our AI Skin Scanner reads your skin using your phone’s camera — no special equipment needed. It evaluates texture, tone, hydration, pore visibility, discoloration, fine lines and more.</p>
 
-      <p>The scanner compares thousands of data points and matches them with dermatologist-backed research and ingredient databases to create a personalized skin profile.</p>
+      <p>It compares thousands of data points with dermatologist-approved research and ingredient databases to create an accurate personalized skin profile.</p>
 
-      <p>Your results help guide product recommendations, treatments, and professional matches tailored specifically to your needs.</p>
+      <p>This gives you precise recommendations for products, treatments, and professional services tailored to your actual beauty needs.</p>
     </div>
-  </section> <!-- IMPORTANT: THIS closes the flex row cleanly -->
+  </section>
 
 
-  <!-- NEW LINE BREAKED SECTION (this was the issue) -->
+  <!-- INTRO TEXT (OWN SECTION → FULL LINE BREAK) -->
   <section class="intro-text">
     <p>Understanding your natural skin and hair type makes choosing products effortless. Use the guides below to identify your features and enjoy a personalized beauty journey.</p>
   </section>
 
 
-  <!-- CARDS (NOW START A NEW SECTION, NOT IN THE SAME FLEX ROW) -->
+  <!-- CARDS SECTION -->
   <section class="analysis-grid">
 
-    <!-- Skin Type -->
+    <!-- Skin -->
     <div class="analysis-card">
       <i data-lucide="droplet"></i>
       <h2>Skin Type Analysis</h2>
@@ -34,25 +278,25 @@
       <ul>
         <li><strong>Normal:</strong> Balanced tone, minimal shine or dryness.</li>
         <li><strong>Dry:</strong> Tightness, flaking, dullness after cleansing.</li>
-        <li><strong>Oily:</strong> Shine through the day, larger pores.</li>
+        <li><strong>Oily:</strong> Shine throughout the day, enlarged pores.</li>
         <li><strong>Combination:</strong> Oily T-zone, dry or normal cheeks.</li>
         <li><strong>Sensitive:</strong> Easily irritated, reactive to temperature/products.</li>
       </ul>
 
-      <p><em>Try this:</em> Wash your face, wait 30 minutes, then observe.</p>
+      <p><em>Try this:</em> Wash your face, wait 30 min, observe.</p>
     </div>
 
-    <!-- Hair Type -->
+    <!-- Hair -->
     <div class="analysis-card">
       <i data-lucide="wind"></i>
       <h2>Hair Type Analysis</h2>
       <p>Your curl pattern, density, and porosity determine what products work best.</p>
 
       <ul>
-        <li><strong>Straight (1):</strong> Smooth, reflective, may get oily fast.</li>
+        <li><strong>Straight (1):</strong> Smooth, reflective, may become oily quickly.</li>
         <li><strong>Wavy (2):</strong> Loose S-shape, moderate frizz.</li>
         <li><strong>Curly (3):</strong> Defined curls, prone to dryness.</li>
-        <li><strong>Coily (4):</strong> Tight curls, delicate and moisture-loving.</li>
+        <li><strong>Coily (4):</strong> Tight curls, delicate, highly moisture-dependent.</li>
       </ul>
 
       <p><em>Try this:</em> Stretch a wet strand to check elasticity.</p>
@@ -60,9 +304,32 @@
 
   </section>
 
-  <!-- SCANNER LINK -->
   <div class="scanner-link">
     <a href="./shop.html">Learn about our AI Beauty Scanner →</a>
   </div>
 
 </main>
+
+
+<footer>
+  © 2025 One Beauty Stop — All Rights Reserved
+</footer>
+
+
+<script>
+  lucide.createIcons();
+
+  const cards = document.querySelectorAll('.analysis-card');
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry, i)=>{
+      if(entry.isIntersecting){
+        setTimeout(()=>entry.target.classList.add('visible'), i * 150);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
